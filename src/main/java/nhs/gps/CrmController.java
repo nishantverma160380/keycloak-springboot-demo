@@ -1,4 +1,4 @@
-package dasniko.customer;
+package nhs.gps;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 @RequiredArgsConstructor
 public class CrmController {
 
-    private final CustomerRepository customerRepository;
+    private final GpRepository gpRepository;
 
     @RequestMapping
     public String home() {
@@ -29,16 +29,16 @@ public class CrmController {
         return "redirect:/";
     }
 
-    @RequestMapping("/customers")
-    public String customers(Model model) {
-        model.addAttribute(customerRepository.findAll());
-        return "customers";
+    @RequestMapping("/gps")
+    public String gps(Model model) {
+        model.addAttribute(gpRepository.findAll());
+        return "gps";
     }
 
-    @RequestMapping("/customers/{id}")
-    public String customer(@PathVariable("id") Long id, Model model) {
-        model.addAttribute(customerRepository.findOne(id));
-        return "customer";
+    @RequestMapping("/gps/{id}")
+    public String gp(@PathVariable("id") Long id, Model model) {
+        model.addAttribute(gpRepository.findOne(id));
+        return "gp";
     }
 
 }
