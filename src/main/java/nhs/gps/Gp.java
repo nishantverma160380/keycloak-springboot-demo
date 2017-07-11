@@ -2,9 +2,6 @@ package nhs.gps;
 
 import lombok.Value;
 
-/**
- * @author Niko Köbler, http://www.n-k.de, @dasniko
- */
 @Value
 class Gp {
     private final Long id;

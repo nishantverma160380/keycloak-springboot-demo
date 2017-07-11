@@ -5,9 +5,6 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * @author Niko Köbler, http://www.n-k.de, @dasniko
- */
 @Component
 class GpRepository {
 
